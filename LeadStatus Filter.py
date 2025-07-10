@@ -1,5 +1,5 @@
 # ---------- Reply / Bounce cleaner for influencer CSVs ----------
-from __future__ import annotations   # ✅ supports 3.7-3.11
+from __future__ import annotations 
 import os, pandas as pd, tkinter as tk
 from tkinterdnd2 import TkinterDnD, DND_FILES
 from tkinter import filedialog
@@ -11,8 +11,8 @@ KEEP_STATUSES = {
     "Completed | Email opened but no reply",
     "Completed | Not yet contacted",
 }
-STATUS_COL_PRIORITY = ("Lead status",)        # fallback: first col with 'status'
-OUT_FOLDER_NAME     = "Cleaned_NoReplies"     # appears on Desktop
+STATUS_COL_PRIORITY = ("Lead status",)        
+OUT_FOLDER_NAME     = "Cleaned_NoReplies"     
 # ──────────────────────────────────────────────────────────────── #
 
 def _detect_status_column(df: pd.DataFrame) -> Optional[str]:
